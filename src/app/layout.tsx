@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import Topbar from "@/components/shared/Topbar";
 const satoshi = localFont({
   src: [
     {
-      path: '../fonts/Satoshi-Variable.ttf',
-      weight: '300 900',
-      style: 'normal',
+      path: "../fonts/Satoshi-Variable.ttf",
+      weight: "300 900",
+      style: "normal",
     },
     {
-      path: '../fonts/Satoshi-VariableItalic.ttf',
-      weight: '300 900',
-      style: 'italic',
-    }
+      path: "../fonts/Satoshi-VariableItalic.ttf",
+      weight: "300 900",
+      style: "italic",
+    },
   ],
-  variable: '--font-satoshi',
+  variable: "--font-satoshi",
 });
 
 export const metadata: Metadata = {
@@ -31,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${satoshi.variable} antialiased`}>
+        <Topbar />
         {children}
       </body>
     </html>
