@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -134,4 +133,13 @@ body {
 
 @utility wrapper {
   @apply px-4 sm:px-6 lg:px-12 xl:px-20;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Chrome/Safari/Webkit */
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Topbar from "@/components/shared/Topbar";
 const satoshi = localFont({
   src: [
     {
@@ -31,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${satoshi.variable} antialiased`}>
-        <Topbar />
         {children}
       </body>
     </html>
