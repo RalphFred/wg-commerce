@@ -8,10 +8,10 @@ export default function HomeBestseller() {
         <div className="text-sm text-purple-600">See All</div>
       </div>
       <div className="flex space-x-4 overflow-x-auto scrollbar-hide">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard showFav/>
+        <ProductCard showFav/>
+        <ProductCard showFav/>
+        <ProductCard showFav/>
       </div>
     </div>
   );

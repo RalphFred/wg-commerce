@@ -1,15 +1,16 @@
 import { Star, Heart } from "lucide-react";
 
-export default function ProductCard() {
+export default function ProductCard({ tag = 'FEATURED', showFav = false }) {
   return (
     <div className="w-[185px]">
       <div className="w-[185px] h-[200px] bg-neutral-200 rounded-lg mb-1 relative">
         {/* Image goes in here */}
-        <Heart className="absolute top-2 right-2 w-6 h-6 text-purple-600 bg-white rounded-full p-1" />
+        { showFav ? <Heart className="absolute top-2 right-2 w-6 h-6 text-purple-600 bg-white rounded-full p-1" /> : null
+      }
       </div>
       <div className="h-8 text-sm flex items-center text-pink-700">
         {/* Tag goes in here */}
-        FEATURED
+        { tag }
       </div>
       <div className="flex justify-between items-center w-full mb-1">
         <div className="text-sm flex-1 truncate">iPhone 16 Pro Max</div>
